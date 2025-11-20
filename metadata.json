@@ -7,7 +7,7 @@
             }
         ],
         "Category": "System Information",
-        "Description": "Youtube search widget.",
+        "Description": "A simple YouTube search KDE Plasma widget.",
         "Icon": "about_kde",
         "Id": "com.nixerii.qckytsrch",
         "Name": "Quick Youtube Search",
