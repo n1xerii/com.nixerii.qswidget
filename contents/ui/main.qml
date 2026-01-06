@@ -34,7 +34,8 @@ PlasmoidItem {
         PlasmaComponents.Popup {
             id: searchPopup
             width: parent.width
-            height: parent.height / 2.25
+            height: parent.height / 1.5
+            y: parent.y - parent.height / 1.5
 
             PlasmaComponents.TextField {
                 id: searchField
