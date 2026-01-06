@@ -47,6 +47,7 @@ PlasmoidItem {
                     Qt.openUrlExternally(
                         "https://www.youtube.com/results?search_query=" + encodeURIComponent(text)
                     )
+                    searchField.clear()
                     popup.close()
                 }
             }
