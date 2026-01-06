@@ -1,44 +1,45 @@
-import QtQuick
-import QtQuick.Layouts
-import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components as PlasmaComponents
+import QtQuick 2.0
+import QtQuick.Layouts 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.plasmoid
 
 
 PlasmoidItem {
     id: root
 
+    Layout.minimumWidth: 100 * PlasmaCore.Units.devicePixelRatio
+    Layout.minimumHeight: 60 * PlasmaCore.Units.devicePixelRatio
     hideOnWindowDeactivate: true
 
     function togglePopup() {
-        if (popup.visible === true) {
-            popup.close()
+        if (searchPopup.visible === true) {
+            searchPopup.close()
         }
         else {
-            popup.open()
+            searchPopup.open()
         }
     }
-
 
     PlasmaComponents.Button {
         id: showButton
         text: "SEARCH"
         font.bold: true
-        //width: parent.width
-        //height: parent.height / 2
+        width: parent.width
+        height: parent.height
         font.pixelSize: 20
 
         onClicked: togglePopup()
 
         PlasmaComponents.Popup {
             id: searchPopup
-            //width: parent.width
-            //height: parent.height
+            width: parent.width
+            height: parent.height / 2.25
 
             PlasmaComponents.TextField {
                 id: searchField
-                //width: parent.width
-                //height: parent.height / 2
+                width: parent.width
+                height: parent.height
 
                 placeholderText: qsTr("Search Youtube...")
 
