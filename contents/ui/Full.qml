@@ -66,7 +66,7 @@ Item {
                 break
         }
 
-        if (serviceLink == null && serviceLink == "") { return }
+        if (serviceLink == null || serviceLink == "") { return }
 
         Qt.openUrlExternally(
             serviceLink + encodeURIComponent(serviceQuery)
