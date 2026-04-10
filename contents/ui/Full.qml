@@ -14,14 +14,40 @@ Item {
         width: parent.width
         height: parent.height
 
-        placeholderText: "Search Youtube..."
+        placeholderText: "Search 🔍"
 
         onAccepted: {
-            Qt.openUrlExternally(
-                "https://www.youtube.com/results?search_query=" + encodeURIComponent(text)
-            )
+            aio_search("DuckDuckGo", text)
+
             text = ""
             widget.expanded = false
         }
+    }
+
+    function aio_search(service, query){
+        var serviceLink = ""
+        var serviceQuery = query
+
+        switch(service) {
+            case "DuckDuckGo":
+                serviceLink = "https://duckduckgo.com/?q="
+                break
+            case "Google":
+                serviceLink = "https://www.google.com/search?q="
+                break
+            case "Youtube":
+                serviceLink = "https://www.youtube.com/results?search_query="
+                break
+            case "Wikipedia":
+                serviceLink = "https://en.wikipedia.org/wiki/"
+                break
+            default:
+                serviceLink = "https://duckduckgo.com/?q="
+                break
+        }
+
+        Qt.openUrlExternally(
+            serviceLink + encodeURIComponent(serviceQuery)
+        )
     }
 }
