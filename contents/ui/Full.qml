@@ -41,6 +41,8 @@ Item {
             case "Wikipedia":
                 serviceLink = "https://en.wikipedia.org/wiki/"
                 break
+            case "Custom":
+                serviceLink = plasmoid.configuration.customLink
             default:
                 serviceLink = "https://duckduckgo.com/?q="
                 break
