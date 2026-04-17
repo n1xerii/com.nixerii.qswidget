@@ -21,5 +21,8 @@
         <entry name="customServiceLink" type="String">
             <default></default>
         </entry>
+        <entry name="buttonSymbol" type="String">
+            <default>H</default>
+        </entry>
     </group>
 </kcfg>

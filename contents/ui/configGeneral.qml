@@ -14,6 +14,8 @@ Kirigami.FormLayout {
     property alias cfg_useCustomService: useCustomService.checked
     property alias cfg_customServiceLink: customServiceLink.text
 
+    property alias cfg_buttonSymbol: buttonSymbol.text
+
     Kirigami.Separator {
         Kirigami.FormData.isSection: true
         Kirigami.FormData.label: i18n("Service")
@@ -45,5 +47,15 @@ Kirigami.FormLayout {
             id: customServiceLink
             placeholderText: i18n("www.something.com/query=")
         }
+    }
+
+    Kirigami.Separator {
+        Kirigami.FormData.isSection: true
+        Kirigami.FormData.label: i18n("Appearance")
+    }
+
+    QQC2.TextField {
+        id: buttonSymbol
+        placeholderText: i18n("H")
     }
 }

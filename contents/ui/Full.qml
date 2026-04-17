@@ -8,36 +8,55 @@ import org.kde.plasma.core as PlasmaCore
 Item {
     id: full
 
-    PlasmaComponents.TextField {
-        id: searchField
-        width: parent.width
-        height: parent.height
+    Layout.minimumWidth: 100
+    Layout.minimumHeight: 45
 
-        placeholderText: "Search 🔍"
+    RowLayout {
+        id: fullRow
 
-        onAccepted: {
+        anchors.fill: parent
+        spacing: 2
 
-            if (plasmoid.configuration.useDuckDuckGo == true) {
-                aio_search("DuckDuckGo", text)
-            }
-            else if (plasmoid.configuration.useGoogle == true) {
-                aio_search("Google", text)
-            }
-            else if (plasmoid.configuration.useYoutube == true) {
-                aio_search("Youtube", text)
-            }
-            else if (plasmoid.configuration.useWikipedia == true) {
-                aio_search("Wikipedia", text)
-            }
-            else if (plasmoid.configuration.useCustomService == true) {
-                aio_search("Custom", text)
-            }
-            else {
-                aio_search("DuckDuckGo", text)
-            }
+        PlasmaComponents.Button {
+            id: homepageButton
 
-            text = ""
-            widget.expanded = false
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            text: plasmoid.configuration.buttonSymbol
+        }
+
+        PlasmaComponents.TextField {
+            id: searchField
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            placeholderText: "Search 🔍"
+
+            onAccepted: {
+                if (plasmoid.configuration.useDuckDuckGo == true) {
+                    aio_search("DuckDuckGo", text)
+                }
+                else if (plasmoid.configuration.useGoogle == true) {
+                    aio_search("Google", text)
+                }
+                else if (plasmoid.configuration.useYoutube == true) {
+                    aio_search("Youtube", text)
+                }
+                else if (plasmoid.configuration.useWikipedia == true) {
+                    aio_search("Wikipedia", text)
+                }
+                else if (plasmoid.configuration.useCustomService == true) {
+                    aio_search("Custom", text)
+                }
+                else {
+                    aio_search("DuckDuckGo", text)
+                }
+
+                text = ""
+                widget.expanded = false
+            }
         }
     }
 
