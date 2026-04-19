@@ -39,28 +39,32 @@ Item {
             placeholderText: "Search 🔍"
 
             onAccepted: {
-                if (plasmoid.configuration.useDuckDuckGo == true) {
-                    aio_search("DuckDuckGo", text)
-                }
-                else if (plasmoid.configuration.useGoogle == true) {
-                    aio_search("Google", text)
-                }
-                else if (plasmoid.configuration.useYoutube == true) {
-                    aio_search("Youtube", text)
-                }
-                else if (plasmoid.configuration.useWikipedia == true) {
-                    aio_search("Wikipedia", text)
-                }
-                else if (plasmoid.configuration.useCustomService == true) {
-                    aio_search("Custom", text)
-                }
-                else {
-                    aio_search("DuckDuckGo", text)
-                }
+                search_checks(text)
 
                 text = ""
                 widget.expanded = false
             }
+        }
+    }
+
+    function search_checks(searchText) {
+        if (plasmoid.configuration.useDuckDuckGo == true) {
+            aio_search("DuckDuckGo", searchText)
+        }
+        else if (plasmoid.configuration.useGoogle == true) {
+            aio_search("Google", searchText)
+        }
+        else if (plasmoid.configuration.useYoutube == true) {
+            aio_search("Youtube", searchText)
+        }
+        else if (plasmoid.configuration.useWikipedia == true) {
+            aio_search("Wikipedia", searchText)
+        }
+        else if (plasmoid.configuration.useCustomService == true) {
+            aio_search("Custom", searchText)
+        }
+        else {
+            aio_search("DuckDuckGo", searchText)
         }
     }
 
