@@ -26,7 +26,10 @@ Item {
             text: plasmoid.configuration.buttonSymbol
 
             onClicked: {
+                search_checks(searchField.text)
 
+                searchField.text = ""
+                widget.expanded = false
             }
         }
 
