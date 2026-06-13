@@ -22,6 +22,8 @@ Kirigami.FormLayout {
     }
 
     ColumnLayout {
+        id: serviceColumn
+
         QQC2.RadioButton {
             id: useDuckDuckGo
             text: qsTr("DuckDuckGo")
