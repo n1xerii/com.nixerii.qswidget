@@ -14,6 +14,7 @@ PlasmoidItem {
     width: 180
     height: 75
 
-    compactRepresentation: Compact {}
-    fullRepresentation: Full {}
+    compactRepresentation: Compact { }
+
+    fullRepresentation: Full { }
 }

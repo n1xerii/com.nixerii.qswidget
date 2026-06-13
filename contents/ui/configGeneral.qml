@@ -15,6 +15,7 @@ Kirigami.FormLayout {
     property alias cfg_customServiceLink: customServiceLink.text
 
     property alias cfg_buttonSymbol: buttonSymbol.text
+    property alias cfg_popupMode: popupMode.checked
 
     Kirigami.Separator {
         Kirigami.FormData.isSection: true
@@ -59,5 +60,10 @@ Kirigami.FormLayout {
     QQC2.TextField {
         id: buttonSymbol
         placeholderText: i18n("H")
+    }
+
+    QQC2.CheckBox {
+        id: popupMode
+        Kirigami.FormData.label: i18n("Popup mode:")
     }
 }
