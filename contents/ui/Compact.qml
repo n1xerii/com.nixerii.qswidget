@@ -13,8 +13,6 @@ Item {
         text: "🔍"
         font.bold: true
         //font.pixelSize: parent.width / 2
-        //x: 0
-        //y: 0
         width: parent.width
         height: parent.height
 
