@@ -25,24 +25,24 @@ Kirigami.FormLayout {
 
         QQC.RadioButton {
             id: useDuckDuckGo
-            text: qsTr("DuckDuckGo")
+            text: i18n("DuckDuckGo")
         }
         QQC.RadioButton {
             id: useGoogle
-            text: qsTr("Google")
+            text: i18n("Google")
         }
         QQC.RadioButton {
             id: useYoutube
-            text: qsTr("Youtube")
+            text: i18n("Youtube")
         }
         QQC.RadioButton {
             id: useWikipedia
-            text: qsTr("Wikipedia")
+            text: i18n("Wikipedia")
         }
 
         QQC.RadioButton {
             id: useCustomService
-            text: qsTr("Custom")
+            text: i18n("Custom")
         }
         QQC.TextField {
             id: customServiceLink
