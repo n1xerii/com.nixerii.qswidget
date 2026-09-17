@@ -14,7 +14,6 @@ Kirigami.FormLayout {
     property alias cfg_customServiceLink: customServiceLink.text
 
     property alias cfg_buttonSymbol: buttonSymbol.text
-    property alias cfg_popupMode: popupMode.checked
 
     Kirigami.Separator {
         Kirigami.FormData.isSection: true
