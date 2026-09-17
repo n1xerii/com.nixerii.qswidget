@@ -11,8 +11,8 @@ PlasmoidItem {
     Plasmoid.icon: 'starred-symbolic'
     hideOnWindowDeactivate: true
 
-    width: 180
-    height: 75
+    width: 100
+    height: 65
 
     compactRepresentation: Compact { }
 
