@@ -18,8 +18,10 @@ Item {
         spacing: 2
 
         PlasmaComponents.Button {
-            id: homepageButton
-
+            id: homepageButtons
+            enabled: plasmoid.configuration.homepageEnabled
+            visible: plasmoid.configuration.homepageEnabled
+            
             Layout.fillWidth: true
             Layout.fillHeight: true
 

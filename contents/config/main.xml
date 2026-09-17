@@ -21,6 +21,9 @@
         <entry name="customServiceLink" type="String">
             <default></default>
         </entry>
+        <entry name="homepageEnabled" type="Bool">
+            <default>false</default>
+        </entry>
         <entry name="buttonSymbol" type="String">
             <default>H</default>
         </entry>

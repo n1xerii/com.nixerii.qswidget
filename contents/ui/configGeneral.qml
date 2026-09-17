@@ -13,6 +13,7 @@ Kirigami.FormLayout {
     property alias cfg_useCustomService: useCustomService.checked
     property alias cfg_customServiceLink: customServiceLink.text
 
+    property alias cfg_homepageEnabled: homepageEnabled.checked
     property alias cfg_buttonSymbol: buttonSymbol.text
     property alias cfg_defaultText: defaultText.text
 
@@ -56,6 +57,11 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Appearance")
     }
 
+    QQC.CheckBox {
+        id: homepageEnabled
+
+        Kirigami.FormData.label: i18n("Button:")
+    }
     QQC.TextField {
         id: buttonSymbol
 
