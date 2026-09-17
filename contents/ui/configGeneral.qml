@@ -1,6 +1,6 @@
-import QtQuick 2.0
-import QtQuick.Layouts
-import QtQuick.Controls 2.5 as QQC2
+import QQC 2.0
+import QQC.Layouts
+import QQC.Controls 2.5 as QQC
 import org.kde.kirigami 2.4 as Kirigami
 
 Kirigami.FormLayout {
@@ -25,28 +25,28 @@ Kirigami.FormLayout {
     ColumnLayout {
         id: serviceColumn
 
-        QQC2.RadioButton {
+        QQC.RadioButton {
             id: useDuckDuckGo
             text: qsTr("DuckDuckGo")
         }
-        QQC2.RadioButton {
+        QQC.RadioButton {
             id: useGoogle
             text: qsTr("Google")
         }
-        QQC2.RadioButton {
+        QQC.RadioButton {
             id: useYoutube
             text: qsTr("Youtube")
         }
-        QQC2.RadioButton {
+        QQC.RadioButton {
             id: useWikipedia
             text: qsTr("Wikipedia")
         }
 
-        QQC2.RadioButton {
+        QQC.RadioButton {
             id: useCustomService
             text: qsTr("Custom")
         }
-        QQC2.TextField {
+        QQC.TextField {
             id: customServiceLink
             placeholderText: i18n("www.something.com/query=")
         }
@@ -57,13 +57,8 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Appearance")
     }
 
-    QQC2.TextField {
+    QQC.TextField {
         id: buttonSymbol
         placeholderText: i18n("H")
-    }
-
-    QQC2.CheckBox {
-        id: popupMode
-        Kirigami.FormData.label: i18n("Popup mode:")
     }
 }
