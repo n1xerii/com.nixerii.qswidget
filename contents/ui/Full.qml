@@ -39,7 +39,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            placeholderText: "Search 🔍"
+            placeholderText: plasmoid.configuration.defaultText
 
             onAccepted: {
                 search_checks(text)

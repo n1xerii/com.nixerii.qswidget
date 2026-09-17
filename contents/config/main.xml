@@ -24,5 +24,8 @@
         <entry name="buttonSymbol" type="String">
             <default>H</default>
         </entry>
+        <entry name="defaultText" type="String">
+            <default>Search</default>
+        </entry>
     </group>
 </kcfg>
