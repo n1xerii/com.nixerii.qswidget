@@ -1,7 +1,6 @@
-import QQC 2.0
-import QQC.Layouts
-import QQC.Controls 2.5 as QQC
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick.Layouts
+import QtQuick.Controls as QQC
+import org.kde.kirigami as Kirigami
 
 Kirigami.FormLayout {
     id: page
