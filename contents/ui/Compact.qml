@@ -10,7 +10,7 @@ Item {
 
     PlasmaComponents.Button {
         id: showButton
-        text: "🔍"
+        text: plasmoid.configuration.buttonSymbol
         font.bold: true
         //font.pixelSize: parent.width / 2
         width: parent.width
